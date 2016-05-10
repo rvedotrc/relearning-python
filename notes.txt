@@ -1,0 +1,98 @@
+Basics
+
+ints, floats.
+
+x / y does floor if both are ints
+x // y does floor even if floats
+
+--------
+
+strings are immutable
+
+len(string)
+len(array)
+
+'x' and "x" are equivalent (both do \n for example)
+use r'x' for raw
+'''triple quoted''' for line breaking
+
+u'unicode string \u0021'
+ord(s)
+s.encode(encoding)
+s.decode(encoding)
+
+--------
+
+Lists: [6,7,8]
+Lists and strings are both sequences
+lists are mutable
+list.append(x)
+
+slice returns copy, so a[:] is a shallow copy of a
+assign to slice e.g. a[0:2] = [7,8,9]
+
+---------
+
+0 is false, other ints are true
+also True, False
+
+print x
+print x, # omit newline
+
+---------
+
+for x in seq:
+	...
+
+range(x)       - list of 0..x-1
+range(x,y)     - list of x..y-1
+range(x,y,z)   - list of x..y-1 skipping z
+
+xrange         - sequence (which can be turned into a list with list() if desired)
+
+if value in sequence:
+
+---------
+
+list(seq) - make a list
+enumerate(seq) - list of (index,element) pairs
+
+Tuples are sequences.  Immutable?
+(a,b,...)    - tuple
+()           - empty tuple
+(x,)         - one-tuple
+
+---------
+4.4
+
+if, elif, else
+for, else       - else runs if the loops runs out
+
+---------
+4.6
+
+def name(arg):
+    ...
+
+in a function, assignments are always local, but references can be
+local/outer/global/builtin.
+
+no automatic "return last expression" - must use "return" (or you get None)
+
+def name(a, b=default_value, **dict):
+def name(a, b, ..., *tuple_of_remaining_args):
+
+
+4.7.4
+
+f(*seq) - "unpack" seq
+
+---------
+4.7.5
+
+lambda is a single expression (not statement)
+e.g.
+
+lambda x: x + 1
+
+
